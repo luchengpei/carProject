@@ -1,0 +1,72 @@
+{
+  "id": "1468993",
+  "name": "carapp",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2569779",
+      "name": "箭头 (下)",
+      "font_class": "jiantouxia",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "4236874",
+      "name": "卖车",
+      "font_class": "maiche",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "4761512",
+      "name": "订单",
+      "font_class": "dingdan",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "4888005",
+      "name": "箭头 左 小",
+      "font_class": "jiantou-left",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "6304937",
+      "name": "箭头 右",
+      "font_class": "jiantouyou",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "7860692",
+      "name": "user",
+      "font_class": "user",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "8348161",
+      "name": "意见反馈",
+      "font_class": "yijianfankui",
+      "unicode": "e724",
+      "unicode_decimal": 59172
+    },
+    {
+      "icon_id": "9092022",
+      "name": "人 (4)",
+      "font_class": "ren",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "10224361",
+      "name": "客服",
+      "font_class": "kefu",
+      "unicode": "e669",
+      "unicode_decimal": 58985
+    }
+  ]
+}

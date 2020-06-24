@@ -1,0 +1,167 @@
+{
+	"pages": [
+		//pages数组中第一项表示应用启动页,
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "",
+				"navigationBarTextStyle": "white",
+				"navigationBarBackgroundColor": "#FFFFFF"
+			}
+		},
+		{
+			"path": "pages/shop/carInfo",
+			"style": {
+				"navigationBarTitleText": "车辆详情",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/shop/shop",
+			"style": {
+				"navigationBarTitleText": "车商门店",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/blank/blank",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/shop/detailConfig",
+			"style": {
+				"navigationBarTitleText": "车辆配置",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/user/collectionCar",
+			"style": {
+				"navigationBarTitleText": "收藏车辆",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/coupons/list",
+			"style": {
+				"navigationBarTitleText": "优惠券",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/coupons/detail",
+			"style": {
+				"navigationBarTitleText": "优惠券详情",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/activty/activty",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/activty/activtyList",
+			"style": {
+				"navigationBarTitleText": "活动",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/receiveCoupon/reveive",
+			"style": {
+				"navigationBarTitleText": "领取优惠券",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/mine/mine",
+			"style": {
+				"navigationBarTitleText": "我的",
+				//  "navigationStyle": "#000000",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+
+
+			}
+		},
+		{
+			"path": "pages/storeDealerList/list",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationBarTextStyle": "white"
+			}
+		}, {
+			"path": "pages/myAsset/myAsset",
+			"style": {
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		}
+
+		, {
+			"path": "pages/storeHome/storeHome",
+			"style": {
+				"navigationBarTitleText": "车生活",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/coupons/storeCoupon",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		}, {
+			"path": "pages/storeHome/activityAll/activityAll",
+			"style": {
+				"navigationBarTitleText": "活动",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		}, {
+			"path": "pages/newUser/unaccalimed",
+			"style": {}
+		}, {
+			"path": "pages/newUser/received",
+			"style": {}
+		}, {
+			"path": "pages/index/search",
+			"style": {
+				// "navigationBarTitleText": "搜索页",
+				"navigationBarBackgroundColor": "#FFFFFF",
+				"navigationBarTextStyle": "black"
+			}
+		}
+	    ,{
+            "path" : "pages/newUser/noFission",
+            "style" : {}
+        }
+    ]
+	// "globalStyle": {
+	// 	"navigationStyle": "custom"
+	// }
+}

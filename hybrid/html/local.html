@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>百度地图</title>
+		<style type="text/css">
+			html {
+				height: 100%
+			}
+
+			body { 
+				height: 100%;
+				margin: 0px;
+				padding: 0px
+			}
+
+			#container {
+				height: 100%
+			}
+		</style>
+	</head>
+	<body>
+		<div class="map-show" id="container"></div>
+		<script src="http://api.map.baidu.com/getscript?v=2.0&ak=lNp8jfSLTRRInqLqfRZUEN3GC1FAzOP1"></script>
+		<!-- uni 的 SDK，必须引用。 -->  
+		<script type="text/javascript" src="//js.cdn.aliyun.dcloud.net.cn/dev/uni-app/uni.webview.0.1.52.js"></script>
+		<script type="text/javascript">
+			// document.addEventListener('UniAppJSBridgeReady', function() {  
+			//     uni.getEnv(function(res) {  
+			//         console.log('当前环境：' + JSON.stringify(res));  
+			//     });  
+			// });
+			var map = new BMap.Map("container");
+			var point = new BMap.Point(116.404, 39.915);
+			var marker = new BMap.Marker(point); // 创建标注
+			var opts = {
+				type: BMAP_NAVIGATION_CONTROL_SMALL, // 控件样式
+				anchor: BMAP_ANCHOR_TOP_LEFT
+			};
+			map.addOverlay(marker); // 将标注添加到地图中
+			marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+			map.centerAndZoom(point, 15);
+			map.enableScrollWheelZoom(true);
+			//添加控件
+			map.addControl(new BMap.NavigationControl(opts));
+			map.addControl(new BMap.ScaleControl());
+			map.addControl(new BMap.GeolocationControl());
+			map.setCurrentCity("北京");
+			marker.addEventListener("click", function() {
+				alert("您点击了标注");
+			});
+			//创建园
+			var circle = new BMap.Circle(point, 500, {
+				strokeColor: "blue",
+				strokeWeight: 2,
+				strokeOpacity: 0.5
+			}); //创建圆
+
+			var polygon = new BMap.Polygon([
+				new BMap.Point(116.387112, 39.920977),
+				new BMap.Point(116.385243, 39.913063),
+				new BMap.Point(116.394226, 39.917988),
+				new BMap.Point(116.401772, 39.921364),
+				new BMap.Point(116.41248, 39.927893)
+			], {
+				strokeColor: "blue",
+				strokeWeight: 2,
+				strokeOpacity: 0.5
+			});
+			//信息窗口
+			var optss = {
+				width: 250, // 信息窗口宽度    
+				height: 100, // 信息窗口高度    
+				title: "天安门" // 信息窗口标题   
+			}
+			var infoWindow = new BMap.InfoWindow("World", optss); // 创建信息窗口对象    
+			map.openInfoWindow(infoWindow, map.getCenter()); // 打开信息窗口
+			//鼠标点击地址提示
+			var geoc = new BMap.Geocoder();
+			map.addEventListener("click", function(e) {
+				var pt = e.point;
+				geoc.getLocation(pt, function(rs) {
+					var addComp = rs.addressComponents;
+					alert(addComp.province + ", " + addComp.city + ", " + addComp.district + ", " + addComp.street + ", " +
+						addComp.streetNumber);
+				});
+			});
+			//随机产生点
+			function addMarker(point) {
+				var markers = new BMap.Marker(point);
+				map.addOverlay(markers);
+			}
+			// 随机向地图添加25个标注
+			var bounds = map.getBounds();
+			var sw = bounds.getSouthWest();
+			var ne = bounds.getNorthEast();
+			var lngSpan = Math.abs(sw.lng - ne.lng);
+			var latSpan = Math.abs(ne.lat - sw.lat);
+			for (var i = 0; i < 8; i++) {
+				var point = new BMap.Point(sw.lng + lngSpan * (Math.random() * 0.7), ne.lat - latSpan * (Math.random() * 0.7));
+				addMarker(point);
+			}
+		</script>
+	</body>
+</html>
